@@ -10,6 +10,7 @@ a {
 
 h1 {
     font-variant: small-caps;
+    text-align: center;
 }
 
 .flex-ctr {
@@ -31,28 +32,27 @@ h1 {
 }
 
 .lock-ctr {
-    background-color: rgb(126, 0, 0);
-    border: 1px solid black;
-    box-shadow: 1px 1px 2px black;
-    border-radius: 0 10% 0 10%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 3em 3em 3em 3em;
-    grid-gap: 20px;
-    padding: 1em;
-    max-width: 300px;
-    > div {
-        text-align: center;
-        vertical-align: middle;
-        padding: 1em;
-        background-color: @backgroundColor;
+    .lock {
+        background-color: rgb(126, 0, 0);
         border: 1px solid black;
-        box-shadow: 1px 1px 1px black;
+        box-shadow: 1px 1px 2px black;
+        border-radius: 0 10% 0 10%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 3em 3em 3em 3em;
+        grid-gap: 20px;
+        padding: 1em;
+        max-width: 300px;
+        > div.btn {
+            text-align: center;
+            vertical-align: middle;
+            padding: 1em;
+            background-color: @backgroundColor;
+            border: 1px solid black;
+            box-shadow: 1px 1px 1px black;
+        }
+    }
+    .content {
+        display: none;
     }
 }
-
-// p {
-//     max-width: 300px;
-//     text-align: justify;
-//     text-justify: auto;
-// }

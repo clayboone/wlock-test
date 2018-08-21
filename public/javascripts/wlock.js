@@ -19,7 +19,9 @@ window.addEventListener('load', (ev) => {
 
 // Handle unlock event
 function lockUnlockedHandler() {
-    console.log('unlocked!');
+    document.querySelector('.lock').style.display = 'none';
+    document.querySelector('.content').style.display = 'block';
+    document.querySelector('#cheatcode').remove();
 }
 
 // Handle lock button clicks.

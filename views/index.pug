@@ -2,22 +2,23 @@ extends layout
 
 block content
     h1= title
-    p Test #[strong #{title}] for fun and profit.
-    .flex-ctr
+    .flex-ctr#cheatcode
         h3.label Enter this:
         h2.code#code &nbsp;
     .lock-ctr
-        .btn(data-buttonid="1") 1
-        .btn(data-buttonid="2") 2
-        .btn(data-buttonid="3") 3
-        .btn(data-buttonid="4") 4
-        .btn(data-buttonid="5") 5
-        .btn(data-buttonid="6") 6
-        .btn(data-buttonid="7") 7
-        .btn(data-buttonid="8") 8
-        .btn(data-buttonid="9") 9
-        span.dummy
-        .btn(data-buttonid="0") 0
-        span.dummy
-    .flex-ctr
-        p I would like a "web lock" like the i3lock program for linux WMs. It locks the screen and you should be able to press buttons until it just stops you from pressing anymore buttons. No need to press &lt;Enter&gt; or &lt;Backspace&gt;, it should just work.
+        .lock
+            .btn(data-buttonid="1") 1
+            .btn(data-buttonid="2") 2
+            .btn(data-buttonid="3") 3
+            .btn(data-buttonid="4") 4
+            .btn(data-buttonid="5") 5
+            .btn(data-buttonid="6") 6
+            .btn(data-buttonid="7") 7
+            .btn(data-buttonid="8") 8
+            .btn(data-buttonid="9") 9
+            span.dummy
+            .btn(data-buttonid="0") 0
+            span.dummy
+        .content
+            .flex-ctr
+                p I would like a "web lock" like the i3lock program for linux WMs. It locks the screen and you should be able to press buttons until it just stops you from pressing anymore buttons. No need to press #[strong &lt;Enter&gt;] or #[strong &lt;Backspace&gt;], it should just work.
