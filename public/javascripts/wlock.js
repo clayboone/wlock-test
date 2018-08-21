@@ -5,6 +5,9 @@ const CODE_LENGTH = 5;
 // Entry point.
 window.addEventListener('load', (ev) => {
     // Create event listeners on the buttons
+    Array.from(document.querySelectorAll('.btn')).forEach((elem) => {
+        console.log(elem);
+    });
 
     // Generate a random code and show it.
     window.theCode = generateRandomCode(CODE_LENGTH);
