@@ -12,6 +12,24 @@ h1 {
     font-variant: small-caps;
 }
 
+.flex-ctr {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 300px;
+    .label {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    .code {
+        padding-right: 2em;
+    }
+    p {
+        padding: 1em;
+        text-align: justify;
+    }
+}
+
 .lock-ctr {
     background-color: rgb(126, 0, 0);
     border: 1px solid black;
@@ -22,7 +40,7 @@ h1 {
     grid-template-rows: 3em 3em 3em 3em;
     grid-gap: 20px;
     padding: 1em;
-
+    max-width: 300px;
     > div {
         text-align: center;
         vertical-align: middle;
@@ -32,3 +50,9 @@ h1 {
         box-shadow: 1px 1px 1px black;
     }
 }
+
+// p {
+//     max-width: 300px;
+//     text-align: justify;
+//     text-justify: auto;
+// }

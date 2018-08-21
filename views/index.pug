@@ -3,6 +3,9 @@ extends layout
 block content
     h1= title
     p Test #[strong #{title}] for fun and profit.
+    .flex-ctr
+        h3.label Today's code is:
+        h2.code#code 123 456
     .lock-ctr
         .btn-1.btn 1
         .btn-2 2
@@ -16,4 +19,5 @@ block content
         i.dummy
         .btn-0 0
         i.dummy
-    p I would like a "web lock" like the i3lock program for linux WMs. It locks the screen and you should be able to press buttons until it just stops you from pressing anymore buttons. No need to press &lt;Enter&gt; or &lt;Backspace&gt;, it should just work.
+    .flex-ctr
+        p I would like a "web lock" like the i3lock program for linux WMs. It locks the screen and you should be able to press buttons until it just stops you from pressing anymore buttons. No need to press &lt;Enter&gt; or &lt;Backspace&gt;, it should just work.
