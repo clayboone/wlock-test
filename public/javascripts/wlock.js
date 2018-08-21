@@ -1,12 +1,12 @@
 'use strict';
 
-const CODE_LENGTH = 5;
+const CODE_LENGTH = 6;
 
 // Entry point.
 window.addEventListener('load', (ev) => {
     // Create event listeners on the buttons
     Array.from(document.querySelectorAll('.btn')).forEach((elem) => {
-        console.log(elem);
+        elem.addEventListener('click', lockButtonHandler);
     });
 
     // Generate a random code and show it.
@@ -16,6 +16,28 @@ window.addEventListener('load', (ev) => {
 
     // Wait...
 });
+
+// Handle unlock event
+function lockUnlockedHandler() {
+    console.log('unlocked!');
+}
+
+// Handle lock button clicks.
+function lockButtonHandler(event) {
+    // Add the pressed button to the tape
+    window.buttonTape = window.buttonTape || '';
+    window.buttonTape += event.target.dataset.buttonid;
+
+    // Trim the old presses
+    if (buttonTape.length > CODE_LENGTH) {
+        window.buttonTape = window.buttonTape.slice(1);
+    }
+
+    // Check if the tape matches the unlock code
+    if (window.buttonTape === window.theCode) {
+        lockUnlockedHandler();
+    }
+}
 
 // Generate a random code of length @length as a string.
 function generateRandomCode(length) {
